@@ -1,0 +1,17 @@
+.site-header {   
+    border-bottom: 1px solid #ccc;  
+    padding: .5em 1em;  
+    display: flex;  
+    justify-content: space-between;  
+   } 
+
+   .site-navigation ul,   
+   .site-navigation li {  
+    margin: 0;   
+    padding: 0;  
+   }  
+   .site-navigation li {  
+    font-size: large;
+    display: inline-block;  
+    margin: 1.4em 1em 1em 1em;  
+   }  

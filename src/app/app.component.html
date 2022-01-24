@@ -1,0 +1,68 @@
+<app-header></app-header>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+        </title>
+    </head>
+  
+    <body>
+    <h1>International Student Application Form</h1>
+    <form [formGroup]="loginForm" (ngSubmit)="loginuser()">
+        <label>User Name
+        <input type="text"name="user_name" formControlName="user_name"  />
+        </label>
+        <br>
+        <br>
+        <span style="color:red" *ngIf="user_name &&  user_name.touched && user_name.invalid" >Enter valid User Name</span>
+        <br>
+        <br>
+        <label>Email
+            <input type="text" name="email" formControlName="email"  />
+            </label>
+            <br>
+            <br>
+            <span style="color:red" *ngIf="email &&  email.touched && email.invalid" >Enter valid email</span>
+            <br>
+            <br>
+
+        <label>Password
+            <input type="password" formControlName="password"  />
+            </label>
+            <br>
+            <br>
+        <span style="color:red" *ngIf="password &&  password.touched && password.invalid " >INVALID Password </span>
+        <br>
+        <br>
+
+        <label>Age
+            <input type="number" formControlName="age"  />
+            </label>
+            <br>
+            <br>
+            <span style="color:red" *ngIf="age &&  age.touched && age.invalid " >Enter 10 digit Mobile Number </span>
+            <br>
+            <br>
+
+        <!-- <label>Gender </label>
+        <br>
+        <input type="checkbox"  ngModel name="male"  />
+      
+        <label>Male</label>
+        <input type="checkbox"  ngModel name="female"  />
+        <label>Female</label>
+        <br>
+        <br> -->
+
+        <label>Phone
+        <input type="tel" formControlName="number" placeholder="Phone number"  />
+        </label>
+        <br>
+        <br>
+        <span style="color:red" *ngIf="number &&  number.touched && number.invalid" >Enter 10 digit number </span>
+        <br>  
+        <button [disabled]="loginForm.invalid">Submit</button>
+        </form>
+    </body>
+</html>
+<app-footer></app-footer>
